@@ -56,6 +56,72 @@
 * Configuration routers with a computer (SNMP?)
 
 
+## Session 4
+
+### Content (20/11/2024)
+
+* 
+
+### To be done
+
+* 
+
+
+## Session 5
+
+### Content (27/11/2024)
+
+* 
+
+### To be done
+
+* 
+
+
+## Session 6
+
+### Content (04/12/2024)
+
+* 
+
+### To be done
+
+* 
+
+
+## Session 7
+
+### Content (11/12/2024)
+
+* 
+
+### To be done
+
+* 
+
+
+## Session 8
+
+### Content (12/12/2024)
+
+* 
+
+### To be done
+
+* 
+
+
+## Session 9
+
+### Content (17/12/2024)
+
+* 
+
+### To be done
+
+* 
+
+
 
 
 ## Session 10
