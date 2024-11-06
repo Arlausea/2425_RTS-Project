@@ -51,6 +51,7 @@
   - Alphonse laptop -> Arthur laptop connected to a router (Alphonse ping Arthur works, Alphonse ping router -> unreachable)
   
 * Reset of one router to change the configuration and connect to it
+  - try to connect to the unconfigurated router by web browser
 
 ### To be done
 
