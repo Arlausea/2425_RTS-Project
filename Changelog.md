@@ -40,3 +40,24 @@
 * Connect several routers independantly and connect to them remotly
 * Communication with routers
 * Configuration routers with a computer (SNMP?)
+
+
+## Session 3
+
+### Content (06/11/2024)
+
+* Discussion with the tutor about wires and power problems (connect every router with the adaptator by the Poe and the Lan) and also about ip address problem
+* Redefine the ip address in order to be in the same network (see the dependancies and the gateway, give manual ip address for routers and create a network connected to the computer)
+
+### To be done
+
+* Connect several routers independantly and connect to them remotly
+* Communication with routers
+* Configuration routers with a computer (SNMP?)
+
+
+
+
+## Session 10
+
+### Presentation (18/12/2024)
