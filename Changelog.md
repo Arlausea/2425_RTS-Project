@@ -46,8 +46,11 @@
 
 ### Content (06/11/2024)
 
-* Discussion with the tutor about wires and power problems (connect every router with the adaptator by the Poe and the Lan) and also about ip address problem
-* Redefine the ip address in order to be in the same network (see the dependancies and the gateway, give manual ip address for routers and create a network connected to the computer)
+* Connection: in D055
+  - PC1 -> router / PC2 -> router (doesn't work)
+  - Alphonse laptop -> Arthur laptop connected to a router (Alphonse ping Arthur works, Alphonse ping router -> unreachable)
+  
+* Reset of one router to change the configuration and connect to it
 
 ### To be done
 
