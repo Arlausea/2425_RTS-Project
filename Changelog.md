@@ -48,7 +48,7 @@
 
 * Connection: in D055
   - PC1 -> router / PC2 -> router (doesn't work)
-  - Alphonse laptop -> Arthur laptop connected to a router (Alphonse ping Arthur works, Alphonse ping router -> unreachable)
+  - Al laptop -> Ar laptop connected to a router (Al ping Ar works, Al ping router -> unreachable)
   
 * Reset of one router to change the configuration and connect to it
   - try to connect to the unconfigurated router by web browser
