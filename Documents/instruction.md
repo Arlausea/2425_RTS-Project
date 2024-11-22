@@ -1,14 +1,22 @@
-Instructions pour le projet 
+Instructions pour le projet:
+
+Expliquer comment se connecter à un routeur (changement d'IP) et tout
+Trouver l'ip du routeur:
+faire un nmap 192.168.1.2/24 ou nmap 192.168.2.2/24
+
+Une fois l'ip trouver se connecter en ssh root@<ipaddress>
 
 Comment mettre le routeur dans la configuration qu'on souhaite
 
-Expliquer comment se connecter à un routeur (changement d'IP) et tout
+
+
 
 SI Factory 
 Passer par l'image facotry
 
 SI Openwirt 
 Passer par l'image openw
+Dans l'image
 ajouter les deux commandes, -basic et +autre commande
 ajouter une partie config de mdp
 
