@@ -28,6 +28,8 @@
 * Communication with routers 
 * Configuration routers with a computer
 
+
+
 ## Session 2
 
 ### Content (23/10/2024)
@@ -64,11 +66,13 @@
 
 ### Content (20/11/2024)
 
-* 
+* installation of openwrt on 4 routers, ssh connection and installation of luci package 
+* 2 routers updated and flash with sysupgrade image of stable version with preconfigurations in it
 
 ### To be done
 
-* 
+* fix router which can't be flash with sysupgrade image or factory image because it is in openwrt and it can't be updated because it is on too old snapshots
+* set a general configuration to apply at all the router to flip in the stable configuration of tplink
 
 
 ## Session 5
