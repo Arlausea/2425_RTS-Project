@@ -9,3 +9,5 @@ Passer par l'image facotry
 
 SI Openwirt 
 Passer par l'image openw
+ajouter les deux commandes, -basic et +autre commande
+ajouter une partie config de mdp
