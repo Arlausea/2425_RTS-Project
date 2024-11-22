@@ -73,6 +73,7 @@
 
 * fix router which can't be flash with sysupgrade image or factory image because it is in openwrt and it can't be updated because it is on too old snapshots
 * set a general configuration to apply at all the router to flip in the stable configuration of tplink
+* config duo DHCP/IPv4 address
 
 
 ## Session 5
