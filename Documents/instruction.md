@@ -8,6 +8,7 @@ faire les commandes:
 * uci set network.lan.proto="dhcp"
 * uci commit network
 * /etc/init.d/network restart
+
 Se connecter au router
 Trouver l'ip du routeur:
 faire un nmap 192.168.1.2/24
