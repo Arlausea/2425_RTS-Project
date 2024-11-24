@@ -1,5 +1,37 @@
-Instructions pour le projet:
+#  Instructions pour configurer un routeur:
 
+## Introduction
+
+Les méthodes pour configurer le routeur varie selon la version installée par défaut sur le routeur. Merci de suivre les instructions suivants les versions ci dessous.
+### Version Factory
+
+La méthode la plus simple dans ce cas est par l'interface web de Tp-Link qui nous permettra par la suite de flasher le routeur et de changer facilement le firmware
+
+#### Etape 1: Vérifier sa connexion dans le même réseau
+
+Par défaut, le routeur a pour adresse IP `192.168.1.1`.  
+Aller dans la configuration de votre réseau puis régler l'adresse IP de votre ordinateur dans ce sous-réseau `192.168.1.2/24` vous permettant de voir le routeur.
+
+> Remarque:  
+N'hésitez pas à regarder sur Wireshark l'interface du réseau en question afin de vérfier l'adresse IP du routeur pour adapter notre adresse IP dans réseau en conséquence. 
+
+N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous réseau]`pour faire une reconnaissance des appareils disponibles.
+
+
+![Photo de Wireshark]()
+![Photo de la configuration réseau]()
+
+#### Etape 2: Ouvrir l'interface
+
+### Version Openwirt Snapshot
+
+
+
+
+
+```sh
+ssh root@192.168.1.1
+```
 Expliquer comment se connecter à un routeur (changement d'IP) et tout
 Trouver l'ip du routeur:
 faire un nmap 192.168.1.2/24
