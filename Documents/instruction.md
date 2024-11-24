@@ -3,11 +3,11 @@
 ## Introduction
 
 Les méthodes pour configurer le routeur varie selon la version installée par défaut sur le routeur. Merci de suivre les instructions suivants les versions ci dessous.
-### Version Factory
+## Version Factory
 
 La méthode la plus simple dans ce cas est par l'interface web de Tp-Link qui nous permettra par la suite de flasher le routeur et de changer facilement le firmware
 
-#### Etape 1: Vérifier sa connexion dans le même réseau
+### Etape 1: Vérifier sa connexion dans le même réseau
 
 Par défaut, le routeur a pour adresse IP `192.168.1.1`.  
 Aller dans la configuration de votre réseau puis régler l'adresse IP de votre ordinateur dans ce sous-réseau `192.168.1.2/24` vous permettant de voir le routeur.
@@ -21,12 +21,25 @@ N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous 
 ![Photo de Wireshark]()
 ![Photo de la configuration réseau]()
 
-#### Etape 2: Ouvrir l'interface
-
-### Version Openwirt Snapshot
+### Etape 2: Ouvrir l'interface web
 
 
+### Etape 3: Flash le nouveau firmware
 
+
+Lien pour le fichier factory:
+
+## Version Openwirt Snapshot
+
+### Etape 1
+
+
+
+
+
+
+
+## To be rewrite
 
 
 ```sh
