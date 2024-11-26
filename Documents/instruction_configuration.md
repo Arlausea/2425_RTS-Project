@@ -119,7 +119,7 @@ You will also need to modify your network configuration so the router can intera
 
 The snapshot version is unstable and often causes issues during updates, as package files tend to change frequently.
 
-### Step 1: Connection
+### Step 1: Connection with 
 *(Details to be added)*
 
 ### Step 2:
