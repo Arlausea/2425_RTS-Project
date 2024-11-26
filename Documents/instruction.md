@@ -5,7 +5,7 @@
 Les méthodes pour configurer le routeur varie selon la version installée par défaut sur le routeur. Merci de suivre les instructions suivants les versions ci dessous.
 ## Version Factory
 
-La méthode la plus simple dans ce cas est par l'interface web de Tp-Link qui nous permettra par la suite de flasher le routeur et de changer facilement le firmware
+La méthode la plus simple dans ce cas est par l'interface web de TP-Link qui nous permettra par la suite de flasher le routeur et de changer facilement le firmware
 
 ### Etape 1: Vérifier sa connexion dans le même réseau
 
@@ -21,7 +21,7 @@ N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous 
 ![Photo de Wireshark]()
 ![Photo de la configuration réseau]()
 
-### Etape 2: Ouvrir l'interface web
+### Etape 2: Interface web
 <div align="center">
 <br>
 <img src="../Images/web_interface.png" width="400"> </br>
@@ -31,13 +31,51 @@ Interface WEB </br>
 
 La connexion s'effectue par votre navigateur favori : `https://tplinkeap.net` or `192.168.1.1`. Les identifiants par défaut sont admin/admin. Pour plus da facilité et de sécurité, la page suivante vous demadera de choisir un nouveau couple identifiant/mot de passe. Nous prendrons `theseus`et `theseus-2023`.
 
+<div align="center">
+<br>
+<img src="../Images/ssh_interface.png" width="400"> </br>
+Interface WEB | Activer SSH connexion </br>
+</br> 
+</div>
 
-### Etape 3: Flash le nouveau firmware
+Vous devez ensuite aller dans l'onglet management puis SSH et cocher la case `SSH Login`. 
+
+<div align="center">
+<br>
+<img src="../Images/flash_firmware_interface.png" width="400"> </br>
+Interface WEB | Flash Fimware </br>
+</br> 
+</div>
+
+Enfin, il faut aller dans l'onglet System puis Update Firmware et récupérer le fichier pour flash le nouveau firmware. 
+Le fichier en question est celui ci:
+
+il a été géneré avec le script suivant:
+
+> Remarque:  
+Vous serez déconnecté à la fin du processus et la nouvelle interface Luci s'ouvrira à la même adresse IP. Il est peut être necéssaire d'attendre pour laisser du temps au routeur de se mettre à jour.
 
 
-Lien pour le fichier factory:
+### Etape bonus: Configurer en DHCP
+
+Connectez vous en SSH à l'adresse IP (la rechercher si besoin): 
+
+```sh
+ssh root@192.168.1.1
+passwd 
+```
+Changez le mot de passe à `theseus-2023`.
+
+```sh
+uci set network.lan.proto="dhcp"
+uci commit network
+/etc/init.d/network restart
+```
+Le riuteur est maintenant prêt à être utilisé avec tous les paquets installés.
 
 ## Version Openwirt Snapshot
+
+Cette version étant instable, elle pose pas mal de problèmes pour la mise à jour comme les fichiers de package ont tendance à changer souvent.
 
 ### Etape 1
 
