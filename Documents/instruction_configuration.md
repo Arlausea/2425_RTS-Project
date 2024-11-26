@@ -25,7 +25,7 @@ Go to your network configuration settings and set your computer's IP address to 
 <div align="center">
 <br>
 <img src="../Images/web_interface.png" width="400"> </br>
-**WEB Interface**  
+WEB Interface  
 </br>
 </div>
 
