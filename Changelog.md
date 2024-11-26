@@ -3,14 +3,14 @@
 1. [Introduction](#introduction)
 2. [Session 1](#session-1)
 3. [Session 2](#session-2)
-4. [Séance 3](#séance-3)
-5. [Séance 4](#séance-4)
-6. [Séance 5](#séance-5)
-7. [Séance 6](#séance-6)
-8. [Séance 7](#séance-7)
-9. [Séance 8](#séance-8)
-10. [Séance 9](#séance-9)
-11. [Séance 10](#séance-10)
+4. [Séance 3](#session-3)
+5. [Séance 4](#session-4)
+6. [Séance 5](#session-5)
+7. [Séance 6](#session-6)
+8. [Séance 7](#session-7)
+9. [Séance 8](#session-8)
+10. [Séance 9](#session-9)
+11. [Séance 10](#session-10)
 
 ## Introduction
 
@@ -24,9 +24,9 @@
 
 ### To be done
 
-* See if we can see them if we connecter every routers independantly
-* Communication with routers 
-* Configuration routers with a computer
+- [ ] See if we can see them if we connecter every routers independantly
+- [ ] Communication with routers 
+- [ ] Configuration routers with a computer
 
 
 
@@ -39,9 +39,9 @@
 
 ### To be done
 
-* Connect several routers independantly and connect to them remotly
-* Communication with routers
-* Configuration routers with a computer (SNMP?)
+- [ ] Connect several routers independantly and connect to them remotly
+- [ ] Communication with routers
+- [ ] Configuration routers with a computer (SNMP?)
 
 
 ## Session 3
@@ -57,9 +57,9 @@
 
 ### To be done
 
-* Connect several routers independantly and connect to them remotly
-* Communication with routers
-* Configuration routers with a computer (SNMP?)
+- [ ] Connect several routers independantly and connect to them remotly
+- [ ] Communication with routers
+- [ ] Configuration routers with a computer (SNMP?)
 
 
 ## Session 4
@@ -67,13 +67,15 @@
 ### Content (20/11/2024)
 
 * installation of openwrt on 4 routers, ssh connection and installation of luci package 
-* 2 routers updated and flash with sysupgrade image of stable version with preconfigurations in it
+* 3 routers updated and flash with sysupgrade image of stable version with preconfigurations in it
+
 
 ### To be done
 
-* fix router which can't be flash with sysupgrade image or factory image because it is in openwrt and it can't be updated because it is on too old snapshots
-* set a general configuration to apply at all the router to flip in the stable configuration of tplink
-* config duo DHCP/IPv4 address
+- [ ] fix router which can't be flash with sysupgrade image or factory image because it is in openwrt and it can't be updated because it is on too old snapshots
+- [ ] set a general configuration to apply at all the router to flip in the stable configuration of tplink
+- [ ] config duo DHCP/IPv4 address
+- [x] Update Intructions.md for future use and documentation
 
 
 ## Session 5
