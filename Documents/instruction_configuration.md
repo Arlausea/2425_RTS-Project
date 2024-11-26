@@ -1,59 +1,59 @@
-#  Instructions pour configurer un routeur:
+# Instructions to Configure a Router
 
 ## Introduction
 
-Les méthodes pour configurer le routeur varie selon la version installée par défaut sur le routeur. Merci de suivre les instructions suivants les versions ci dessous.
-## Depuis Version Factory
-
-La méthode la plus simple dans ce cas est par l'interface web de TP-Link qui nous permettra par la suite de flasher le routeur et de changer facilement le firmware
-
-### Etape 1: Vérifier sa connexion dans le même réseau
-
-Par défaut, le routeur a pour adresse IP `192.168.1.1`.  
-Allez dans la configuration de votre réseau puis régler l'adresse IP de votre ordinateur dans ce sous-réseau comme par exemple `192.168.1.2/24` vous permettant de voir le routeur.
-
-> Remarque:  
-N'hésitez pas à regarder sur Wireshark l'interface du réseau en question afin de vérfier l'adresse IP du routeur pour adapter notre adresse IP dans réseau en conséquence. 
-
-N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous réseau]`pour faire une reconnaissance des appareils disponibles.
+The methods for configuring a router vary depending on the default version installed on the device. Please follow the instructions corresponding to the versions below.
 
 
-![Photo de Wireshark]()
-![Photo de la configuration réseau]()
+## From Factory Version
 
-### Etape 2: Interface web
+The simplest method in this case is using the TP-Link web interface, which will subsequently allow us to flash the router and easily change its firmware.
+
+### Step 1: Verify Connection to the Same Network
+
+By default, the router's IP address is `192.168.0.254`.  
+Go to your network configuration settings and set your computer's IP address to one in the same subnet, such as `192.168.0.2/24`, to access the router.
+
+> **Note:**  
+> Feel free to use Wireshark to monitor the network interface in question to verify the router's IP address and adjust your computer's IP address accordingly.  
+> Additionally, you can use the command `nmap -sn [your subnet IP range]` to scan for available devices on the network.
+
+![Wireshark Screenshot]()
+![Network Configuration Screenshot]()
+
+### Step 2: Web Interface
 <div align="center">
 <br>
 <img src="../Images/web_interface.png" width="400"> </br>
-Interface WEB </br>
-</br> 
+**WEB Interface**  
+</br>
 </div>
 
-La connexion s'effectue par votre navigateur favori : `https://tplinkeap.net` or `192.168.1.1`. Les identifiants par défaut sont admin/admin. Pour plus da facilité et de sécurité, la page suivante vous demadera de choisir un nouveau couple identifiant/mot de passe. Nous prendrons `theseus`et `theseus-2023`.
+Access the router via your favorite browser using `https://tplinkeap.net` or `http://192.168.0.254`. The default credentials are `admin/admin`.  
+For added convenience and security, the next page will prompt you to set a new username/password. We'll use `theseus` and `theseus-2023` in this example.
 
 <div align="center">
 <br>
 <img src="../Images/ssh_interface.png" width="400"> </br>
-Interface WEB | Activer SSH connexion </br>
-</br> 
+WEB Interface | Enable SSH Connection  
+</br>
 </div>
 
-Vous devez ensuite aller dans l'onglet management puis SSH et cocher la case `SSH Login`. 
+Next, navigate to the **Management** tab, then **SSH**, and enable the `SSH Login` option.
 
 <div align="center">
 <br>
 <img src="../Images/flash_firmware_interface.png" width="400"> </br>
-Interface WEB | Flash Fimware </br>
-</br> 
+WEB Interface | Flash Firmware  
+</br>
 </div>
 
-Enfin, il faut aller dans l'onglet System puis Update Firmware et récupérer le fichier pour flash le nouveau firmware. 
-Le fichier en question est celui ci: [Firmware pour Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin ) (Not tried yet but should work)
+Finally, go to the **System** tab, then **Update Firmware**, and upload the new firmware file.  
+Use this file: [Firmware for Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin) *(Not tested yet but expected to work)*.  
 
-il a été géneré avec le script suivant:
+This firmware was generated with the following script:
 
 ```sh
-
 PASSWORD="theseus-2023"
 
 # Configure default entry points
@@ -66,7 +66,6 @@ MESH5_NAME="THESEUS"
 MESH5_PWD=$PASSWORD
 MESH5_RADIO=radio0
 MESH5_CHANNEL=36
-
 
 WIFI_NAME="RABBIT"
 WIFI_PWD=$PASSWORD
@@ -92,13 +91,14 @@ then
 fi
 ````
 
-> Remarque:  
-Vous serez déconnecté à la fin du processus et la nouvelle interface Luci s'ouvrira à la même adresse IP. Il est peut être necéssaire d'attendre pour laisser du temps au routeur de se mettre à jour.
+> **Note:**  
+> After the process is completed, you will be disconnected, and the new **Luci interface** will open at the same IP address. It may take some time for the router to finish updating, so please be patient.
 
-Le routeur est maintenant prêt à être utilisé avec tous les paquets installés.
-### Etape bonus: Configurer en DHCP
+The router is now ready to use with all necessary packages installed.
 
-Connectez vous en SSH à l'adresse IP (la rechercher si besoin, ce n'est pas nécessairement celle-ci): 
+### Bonus Step: Configure DHCP
+
+Log in via SSH to the router's IP address (you may need to search for the correct IP, as it may not always be the same):
 
 ```sh
 ssh root@192.168.1.1
@@ -110,16 +110,26 @@ uci commit network
 /etc/init.d/network restart
 ```
 
-Il faut aussi modifier sa configuration réseau pour que le routeur puisse interargir avec le serveur DHCP. Il est possible de passer son ordinateur en proxy dans les configurations
+You will also need to modify your network configuration so the router can interact with the DHCP server. In some cases, you may need to configure your computer as a proxy in the network settings.
 
-![Photo de la configuration réseau]()
+![Network Configuration Screenshot]()
 
-## Depuis Version Openwirt Snapshot
 
-Cette version étant instable, elle pose pas mal de problèmes pour la mise à jour comme les fichiers de package ont tendance à changer souvent.
+## From OpenWRT Snapshot Version
 
-### Etape 1: 
+The snapshot version is unstable and often causes issues during updates, as package files tend to change frequently.
 
+### Step 1: Connection
+*(Details to be added)*
+
+### Step 2:
+*(Details to be added)*
+
+### Step 3:
+*(Details to be added)*
+
+### Step 4:
+*(Details to be added)*
 
 
 
@@ -128,10 +138,6 @@ Cette version étant instable, elle pose pas mal de problèmes pour la mise à j
 
 ## To be rewrite
 
-
-```sh
-ssh root@192.168.1.1
-```
 Expliquer comment se connecter à un routeur (changement d'IP) et tout
 Trouver l'ip du routeur:
 faire un nmap 192.168.1.2/24
