@@ -48,7 +48,7 @@ Interface WEB | Flash Fimware </br>
 </div>
 
 Enfin, il faut aller dans l'onglet System puis Update Firmware et récupérer le fichier pour flash le nouveau firmware. 
-Le fichier en question est celui ci: [Firmware pour Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin )
+Le fichier en question est celui ci: [Firmware pour Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin ) (Not tried yet but should work)
 
 il a été géneré avec le script suivant:
 
