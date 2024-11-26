@@ -22,8 +22,9 @@ N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous 
 ![Photo de la configuration réseau]()
 
 ### Etape 2: Ouvrir l'interface web
-![Interface WEB](Images/web_inteface.png)
-
+<div align="center">
+![Interface WEB](../Images/web_inteface.png)
+</div>
 
 ### Etape 3: Flash le nouveau firmware
 
