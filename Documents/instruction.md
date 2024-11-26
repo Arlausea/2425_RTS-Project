@@ -10,7 +10,7 @@ La méthode la plus simple dans ce cas est par l'interface web de Tp-Link qui no
 ### Etape 1: Vérifier sa connexion dans le même réseau
 
 Par défaut, le routeur a pour adresse IP `192.168.1.1`.  
-Aller dans la configuration de votre réseau puis régler l'adresse IP de votre ordinateur dans ce sous-réseau `192.168.1.2/24` vous permettant de voir le routeur.
+Allez dans la configuration de votre réseau puis régler l'adresse IP de votre ordinateur dans ce sous-réseau comme par exemple `192.168.1.2/24` vous permettant de voir le routeur.
 
 > Remarque:  
 N'hésitez pas à regarder sur Wireshark l'interface du réseau en question afin de vérfier l'adresse IP du routeur pour adapter notre adresse IP dans réseau en conséquence. 
@@ -28,6 +28,9 @@ N'hésitez pas non plus à utilser la commande `nmap -sn [votre IP dans le sous 
 Interface WEB </br>
 </br> 
 </div>
+
+La connexion s'effectue par votre navigateur favori : `https://tplinkeap.net` or `192.168.1.1`. Les identifiants par défaut sont admin/admin. Pour plus da facilité et de sécurité, la page suivante vous demadera de choisir un nouveau couple identifiant/mot de passe. Nous prendrons `theseus`et `theseus-2023`.
+
 
 ### Etape 3: Flash le nouveau firmware
 
