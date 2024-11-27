@@ -61,7 +61,7 @@ WEB Interface | Flash Firmware
 </div>
 
 Finally, go to the **System** tab, then **Update Firmware**, and upload the new firmware file.  
-Use this file: [Firmware for Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin) *(Not tested yet but expected to work)*.  
+Use this file: [Firmware for Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin) *(Not tested yet but expected to work) => Don't work*.  
 
 This firmware was generated with the following script:
 
