@@ -126,7 +126,7 @@ You will also need to modify your network configuration so the router can intera
 
 <div align="center">
 <br>
-<img src="../Images/dhcp_config.png" width="400"> </br>
+<img src="../Images/DHCP_config.png" width="400"> </br>
 Network Configuration DHCP  
 </br>
 </div>
