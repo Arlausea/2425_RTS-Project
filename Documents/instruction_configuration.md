@@ -63,45 +63,7 @@ WEB Interface | Flash Firmware
 Finally, go to the **System** tab, then **Update Firmware**, and upload the new firmware file.  
 Use this file: [Firmware for Factory](Firmwares/openwrt-23.05.5-0d92fd07ec16-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin) *(Not tested yet but expected to work) => Don't work*.  
 
-This firmware was generated with the following script:
-
-```sh
-PASSWORD="theseus-2023"
-
-# Configure default entry points
-MESH_NAME="THESEUS"
-MESH_PWD=$PASSWORD
-MESH_RADIO=radio1
-MESH_CHANNEL=1
-
-MESH5_NAME="THESEUS"
-MESH5_PWD=$PASSWORD
-MESH5_RADIO=radio0
-MESH5_CHANNEL=36
-
-WIFI_NAME="RABBIT"
-WIFI_PWD=$PASSWORD
-WIFI_RADIO=radio1
-WIFI_CHANNEL=10
-WIFI_MOBDOMAIN='2222'
-
-WIFI5_NAME="RABBIT5"
-WIFI5_PWD=$PASSWORD
-WIFI5_RADIO=radio0
-WIFI5_CHANNEL=36
-WIFI5_MOBDOMAIN='2222'
-
-# Change Password
-var=`grep  '^root:' /etc/shadow | cut -d: -f2 `
-if [ "$var " == " " ]
-then
-(
-         echo $PASSWORD
-         sleep 1
-         echo $PASSWORD
-)|passwd root
-fi
-````
+For the moment, we just erase one package and add wpad-mesh-openssl. The idea is to put also a bash script to directly configure the router.
 
 > **Note:**  
 > After the process is completed, you will be disconnected, and the new **Luci interface** will open at the same IP address. It may take some time for the router to finish updating, so please be patient.
