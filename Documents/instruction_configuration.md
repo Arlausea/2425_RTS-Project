@@ -16,7 +16,7 @@ Go to your network configuration settings and set your computer's IP address to 
 
 > **Note:**  
 > Feel free to use Wireshark to monitor the network interface in question to verify the router's IP address and adjust your computer's IP address accordingly.  
-> Additionally, you can use the command `nmap -sn [your subnet IP range]` to scan for available devices on the network.
+> Additionally, you can use the command `nmap -sn [your subnet IP range with netmask]` to scan for available devices on the network.
 
 <div align="center">
 <br>
