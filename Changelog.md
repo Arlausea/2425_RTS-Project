@@ -82,12 +82,13 @@
 
 ### Content (27/11/2024)
 
-* 
+* Update of the last router (lapin_11) => scp ou ssh to flash the image manually instaed of doing it through Luci
+* Discussion over next steps with tutor
 
 ### To be done
 
-* 
-
+* Script config_lapin.sh with argument name ipaddress
+*   
 
 ## Session 6
 
