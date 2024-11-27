@@ -82,7 +82,7 @@
 
 ### Content (27/11/2024)
 
-* Update of the last router (lapin_11) => scp ou ssh to flash the image manually instaed of doing it through Luci
+* Update of the last router (lapin_11) => scp or ssh to flash the image manually instaed of doing it through Luci
 * Discussion over next steps with tutor
 * Four routers: stable+luci+mesh+pwd
 
@@ -91,6 +91,8 @@
 * Script config_lapin.sh with argument name ipaddress
   - scp script openwrt
   - ssh -c ...
+* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
+* Update excel Avancement_ip_balises
   
 
 ## Session 6
