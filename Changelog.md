@@ -84,11 +84,14 @@
 
 * Update of the last router (lapin_11) => scp ou ssh to flash the image manually instaed of doing it through Luci
 * Discussion over next steps with tutor
+* Four routers: stable+luci+mesh+pwd
 
 ### To be done
 
 * Script config_lapin.sh with argument name ipaddress
-*   
+  - scp script openwrt
+  - ssh -c ...
+  
 
 ## Session 6
 
