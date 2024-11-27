@@ -88,10 +88,10 @@
 
 ### To be done
 
+* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
 * Script config_lapin.sh with argument name ipaddress
   - scp script openwrt
   - ssh -c ...
-* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
 * Update excel Avancement_ip_balises
   
 
