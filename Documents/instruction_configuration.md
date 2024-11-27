@@ -18,8 +18,20 @@ Go to your network configuration settings and set your computer's IP address to 
 > Feel free to use Wireshark to monitor the network interface in question to verify the router's IP address and adjust your computer's IP address accordingly.  
 > Additionally, you can use the command `nmap -sn [your subnet IP range]` to scan for available devices on the network.
 
-![Wireshark Screenshot]()
-![Network Configuration Screenshot]()
+<div align="center">
+<br>
+<img src="../Images/wireshark.png" width="400"> </br>
+Wireshark  
+</br>
+</div>
+
+<div align="center">
+<br>
+<img src="../Images/manual_config.png" width="400"> </br>
+Network Configuration   
+</br>
+</div>
+
 
 ### Step 2: Web Interface
 <div align="center">
@@ -112,8 +124,12 @@ uci commit network
 
 You will also need to modify your network configuration so the router can interact with the DHCP server. In some cases, you may need to configure your computer as a proxy in the network settings.
 
-![Network Configuration Screenshot]()
-
+<div align="center">
+<br>
+<img src="../Images/dhcp_config.png" width="400"> </br>
+Network Configuration DHCP  
+</br>
+</div>
 
 ## From OpenWRT Snapshot Version
 
