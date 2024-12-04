@@ -99,15 +99,15 @@
 
 ### Content (04/12/2024)
 
-* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
 * Update excel Avancement_ip_balises
 * write a script for flash image to configure router with DHCP/IPv6 and several other configs needed
-* allocate IPv6 to lapin_01 and lapin_02
+* allocate IPv6 to lapin_02
 * nmap -6sn for IPv6 and connect by Luci through web with http://[IPv6_address]
 
 ### To be done
 
-* 
+* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
+* change lapin_01 lapin_02 previous
 
 
 ## Session 7
