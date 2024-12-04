@@ -99,7 +99,9 @@
 
 ### Content (04/12/2024)
 
-* 
+* Allocate to each router an IPv6 address to have a double interface DHCP/IP available
+* Update excel Avancement_ip_balises
+* write a script for flash image to configure router with DHCP/IPv6
 
 ### To be done
 
