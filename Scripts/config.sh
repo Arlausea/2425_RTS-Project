@@ -3,10 +3,10 @@
 
 # Nom et IP (à préciser en arguments)
 
-NAME="Lapin_01"
+NAME=$1
 ID="${NAME: -2}"
 IPID="::${ID}0"
-IP="192.168.2.10/24"
+IP="192.168.2.${ID}0/24"
 
 # Nouveau mot de passe root
 NEW_ROOT_PASSWD="theseus-2023"
