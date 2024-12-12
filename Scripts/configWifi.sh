@@ -64,6 +64,7 @@ uci set "wireless.$MESH_RADIO.channel"=$MESH_CHANNEL
 uci delete "wireless.$MESH_RADIO.disabled"
 
 
+# A retirer et créer à la place un AP RABBIT en 5G !!!!!!!!!!!!!!!!!!!!!!!!!!
 # create the mesh Wifi
 uci set wireless.wifinet3=wifi-iface
 uci set wireless.wifinet3.device=$MESH5_RADIO
@@ -77,6 +78,7 @@ uci set wireless.wifinet3.mesh_rssi_threshold='0'
 uci set wireless.wifinet3.network='lan'
 uci set "wireless.$MESH5_RADIO.channel"=$MESH5_CHANNEL
 uci delete "wireless.$MESH5_RADIO.disabled"
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 # create the AP Wifi 2.4GHz
@@ -118,4 +120,10 @@ wifi down
 /etc/init.d/wpad restart
 wifi up
 
-echo "
+echo "Configuration Wifi mise à jour :"
+echo "- $MESH_NAME,mesh en 2.4G en $MESH_RADIO, channel $MESH_CHANNEL."
+echo "- $MESH5_NAME,mesh en 5G en $MESH5_RADIO, channel $MESH5_CHANNEL."
+echo "- $WIFI_NAME,wifi 2.4G en $WIFI_RADIO, channel $WIFI_CHANNEL et mobdomain $WIFI_MOBDOMAIN."
+echo "- $WIFI5_NAME,wifi 5G en $WIFI5_RADIO, channel $WIFI_CHANNEL et mobdomain $WIFI5_MOBDOMAIN."
+echo "- Mots de passe root modifiés."
+echo "Script fonctionnel sans erreur"
