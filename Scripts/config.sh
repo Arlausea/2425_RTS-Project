@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 # Nom et IP (à préciser en arguments)
 
 NAME="Lapin_01"
