@@ -6,8 +6,8 @@ NAME=$1
 LAN_IP=$2
 
 ssh root@$LAN_IP
-scp config.sh /tmp
-scp configWifi.sh /tmp
+scp config.sh /tmp/
+scp configWifi.sh /tmp/
 ./config.sh $NAME $LAN_IP
 ./configWifi.sh $NAME $LAN_IP
 
