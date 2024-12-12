@@ -8,12 +8,16 @@
 # the script might not run on all hardware !!!
 # Expected NAME and LAN_IP in argument of this script
 
+#      A MODIFIER 5G ->AP et AP _XX
+#      A MODIFIER 2.4G ->AP et MESH
+
 # ######################
 # you may customize this
 # ######################
 
 NAME=$1
 LAN_IP=$2
+ID=${NAME: -2}
 
 PASSWORD="theseus-2023"
 
@@ -34,22 +38,11 @@ WIFI_RADIO=radio1
 WIFI_CHANNEL=10
 WIFI_MOBDOMAIN='2222'
 
-WIFI5_NAME="RABBIT5"
+WIFI5_NAME="RABBIT_${ID}"
 WIFI5_PWD=$PASSWORD
 WIFI5_RADIO=radio0
 WIFI5_CHANNEL=36
 WIFI5_MOBDOMAIN='2222'
-
-# install the wpad mesh package
-var=`grep  '^root:' /etc/shadow | cut -d: -f2 `
-if [ "$var " == " " ]
-then
-(
-         echo $PASSWORD
-         sleep 1
-         echo $PASSWORD
-)|passwd root
-fi
 
 
 # delete the "OpenWrt" radios
