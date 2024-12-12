@@ -114,22 +114,26 @@
 
 ### Content (11/12/2024)
 
-* 
+* Script config.sh to configure IPv6 and IPv4:DHCP name, password,  
 
 ### To be done
 
-* 
+* configWifi.sh and autoConfig.sh
 
 
 ## Session 8
 
 ### Content (12/12/2024)
 
-* 
+* Scripts:
+ - config.sh for automation of routers configuration
+ - configWifi.sh for automation of wifi deployement
+ - autoConfig.sh for connection with the router, copying config.sh in the router and execute it
 
 ### To be done
 
-* 
+* Presentation and report
+* combining configWifi.sh and config.sh into config.sh, test autoConfig.sh
 
 
 ## Session 9
