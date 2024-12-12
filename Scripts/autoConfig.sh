@@ -4,6 +4,9 @@
 
 NAME=$1
 LAN_IP=$2
+ID="${NAME: -2}"
+IPID="::${ID}0"
+IP="192.168.2.${ID}0/24"
 
 scp /doc/config.sh root@$LAN_IP:/tmp/
 ssh root@$LAN_IP
@@ -14,7 +17,7 @@ chmod +x /tmp/config.sh
 echo "Configuration mise à jour sur $NAME:"
 echo "- IPv4 basculé en DHCP."
 echo "- IPv6 statique configuré (fd71:C:2025$IPID/64)."
-echo "- Adresse IPv4 '$LAN_IP' supprimée (si existante)."
+echo "- Adresse IPv4 '$IP' supprimée (si existante)."
 echo "- Mot de passe root modifié."
 echo "Script fonctionnel sans erreur"
 
