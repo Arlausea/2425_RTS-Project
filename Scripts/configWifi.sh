@@ -6,7 +6,7 @@
 # backup your router first !!!!
 # script expects factory settings+1st script to be executed!!!!
 # the script might not run on all hardware !!!
-# Expected NAME and LAN_IP in argument of this script
+# Expected NAME in argument of this script
 
 #      A MODIFIER 5G ->AP et AP _XX
 #      A MODIFIER 2.4G ->AP et MESH
@@ -16,7 +16,6 @@
 # ######################
 
 NAME=$1
-LAN_IP=$2
 ID=${NAME: -2}
 
 PASSWORD="theseus-2023"
@@ -118,3 +117,5 @@ uci commit
 wifi down
 /etc/init.d/wpad restart
 wifi up
+
+echo "
