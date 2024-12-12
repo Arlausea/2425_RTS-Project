@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Nom et IP (à préciser en paramètres)
+# Nom et IP (à préciser en arguments)
 
 NAME="Lapin_01"
 ID="${NAME: -2}"
@@ -24,7 +24,7 @@ uci set network.lan.ip6assign='64'
 uci set network.lan.ip6ifaceid=$IPID
 
 # 3. Supprimer l'adresse IP par défaut
-uci del_list network.lan.ipaddr='192.168.2.10/24'
+uci del_list network.lan.ipaddr=$IP
 
 # 4. Changer le mot de passe root
 echo -e "$NEW_ROOT_PASSWD\n$NEW_ROOT_PASSWD" | passwd root
