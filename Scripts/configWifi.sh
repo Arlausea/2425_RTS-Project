@@ -51,26 +51,10 @@ then
 fi
 
 
-# Configure Lan
-uci set network.lan.proto="static"
-uci set network.lan.ipaddr=$LAN_IP
-uci set network.lan.netmask="255.255.255.0"
-uci set network.lan.gateway="192.168.2.1"
-uci set network.lan.dns="192.168.2.1"
-uci commit network
-
-/etc/init.d/network restart
-sleep 5
-
-opkg update
-opkg install luci
-opkg remove wpad-basic-mbedtls
-opkg install wpad-mesh-openssl
-
-
 # delete the "OpenWrt" radios
 uci delete wireless.default_radio0
 uci delete wireless.default_radio1
+
 
 # create the mesh Wifi
 uci set wireless.wifinet0=wifi-iface
@@ -102,7 +86,6 @@ uci set "wireless.$MESH5_RADIO.channel"=$MESH5_CHANNEL
 uci delete "wireless.$MESH5_RADIO.disabled"
 
 
-
 # create the AP Wifi 2.4GHz
 uci set wireless.wifinet1=wifi-iface
 uci set wireless.wifinet1.device=$WIFI_RADIO
@@ -118,6 +101,7 @@ uci set wireless.wifinet1.ft_psk_generate_local='1'
 uci set wireless.wifinet1.network='lan'
 uci set "wireless.$WIFI_RADIO.channel"=$WIFI_CHANNEL
 uci delete "wireless.$WIFI_RADIO.disabled"
+
 
 # create the AP Wifi 5GHz
 uci set wireless.wifinet2=wifi-iface
@@ -135,13 +119,8 @@ uci set wireless.wifinet2.network='lan'
 uci set "wireless.$WIFI5_RADIO.channel"=$WIFI5_CHANNEL
 uci delete "wireless.$WIFI5_RADIO.disabled"
 
-uci set system.@system[0].hostname=$NAME
-
 uci commit
 
 wifi down
 /etc/init.d/wpad restart
 wifi up
-
-
-
