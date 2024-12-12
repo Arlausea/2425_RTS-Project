@@ -5,7 +5,9 @@
 NAME="Lapin_01"
 ID="${NAME: -2}"
 IPID="::${ID}0"
-IP="192.168.2.10/24"
+IP="192.168.1.1/24" # Adresse par défaut sur OpenWirt
+
+
 
 # Nouveau mot de passe root
 NEW_ROOT_PASSWD="theseus-2023"
@@ -24,7 +26,7 @@ uci set network.lan.ip6assign='64'
 uci set network.lan.ip6ifaceid=$IPID
 
 # 3. Supprimer l'adresse IP par défaut
-uci del_list network.lan.ipaddr='192.168.2.10/24'
+uci del_list network.lan.ipaddr=$IP
 
 # 4. Changer le mot de passe root
 echo -e "$NEW_ROOT_PASSWD\n$NEW_ROOT_PASSWD" | passwd root
