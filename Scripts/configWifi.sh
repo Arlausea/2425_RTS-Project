@@ -6,6 +6,7 @@
 # backup your router first !!!!
 # script expects factory settings+1st script to be executed!!!!
 # the script might not run on all hardware !!!
+# Expected NAME and LAN_IP in argument of this script
 
 # ######################
 # you may customize this
