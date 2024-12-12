@@ -11,8 +11,8 @@
 # you may customize this
 # ######################
 
-LAN_IP=$2
 NAME=$1
+LAN_IP=$2
 
 PASSWORD="theseus-2023"
 
