@@ -134,6 +134,7 @@
 
 * Presentation and report
 * combining configWifi.sh and config.sh into config.sh, test autoConfig.sh
+* Solve the issue with Wifi mesh point at 2.4 GHz
 
 
 ## Session 9
