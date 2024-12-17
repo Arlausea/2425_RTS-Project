@@ -10,7 +10,7 @@ IP="192.168.2.${ID}0/24"
 
 scp /doc/config.sh root@$LAN_IP:/tmp/
 ssh root@$LAN_IP
-echo -e "$NEW_ROOT_PASSWD\n$NEW_ROOT_PASSWD" | passwd root
+echo -e "theseus-2023\ntheseus-2023" | passwd root
 chmod +x /tmp/config.sh
 /tmp/config.sh $NAME
 exit
