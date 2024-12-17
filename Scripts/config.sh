@@ -47,3 +47,47 @@ echo "- Mot de passe root modifié."
 echo "Script fonctionnel sans erreur"
 
 
+uci set wireless.@wifi-device[0].disabled='0'
+uci set wireless.@wifi-device[1].disabled='0'
+
+# Configurer le wifi mesh en 2.4 GHz
+uci add wireless wifi-iface
+uci set wireless.@wifi-iface[-1].device='radio1'  # Associer à la radio1
+uci set wireless.@wifi-iface[-1].mode='mesh'  # Mode mesh
+uci set wireless.@wifi-iface[-1].encryption='sae'  # Chiffrement WPA3-SAE (recommandé pour le mesh)
+uci set wireless.@wifi-iface[-1].key=$PASSWD  # Clé de sécurité
+uci set wireless.@wifi-iface[-1].mesh_id='THESEUS'  # Nom du réseau maillé
+uci set wireless.@wifi-iface[-1].mesh_fwding='1'  # Activer le forwarding dans le mesh
+uci set wireless.@wifi-iface[-1].mesh_rssi_threshold='0'  # Aucun seuil RSSI (par défaut)
+uci set wireless.@wifi-iface[-1].network='lan'  # Associer au réseau 'lan'
+
+# Appliquer les changements
+uci commit wireless
+wifi reload
+
+# Configurer le point d'accès en 5Ghz
+
+uci add wireless wifi-iface
+uci set wireless.@wifi-iface[-1].device='radio0'
+uci set wireless.@wifi-iface[-1].mode='ap'
+uci set wireless.@wifi-iface[-1].ssid=$NAMEID
+uci set wireless.@wifi-iface[-1].encryption='sae-mixed'  
+uci set wireless.@wifi-iface[-1].key=$PASSWD  
+uci set wireless.@wifi-iface[-1].ieee80211r='1'
+uci set wireless.@wifi-iface[-1].mobility_domain='2222'
+uci set wireless.@wifi-iface[-1].ft_over_ds='0'
+uci set wireless.@wifi-iface[-1].ft_psk_generate_local='1'
+uci set wireless.@wifi-iface[-1].network='lan'  
+
+
+uci commit wireless
+wifi reload
+
+
+# Suppresion des points d'accès Wifi par défaut
+
+uci delete wireless.default_radio0
+uci delete wireless.default_radio1
+
+uci commit
+wifi reload
