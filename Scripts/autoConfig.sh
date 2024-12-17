@@ -10,9 +10,11 @@ IP="192.168.2.${ID}0/24"
 
 scp /doc/config.sh root@$LAN_IP:/tmp/
 ssh root@$LAN_IP
-PASSWD
+echo -e "$NEW_ROOT_PASSWD\n$NEW_ROOT_PASSWD" | passwd root
+echo "Connexion ssh réussie"
 chmod +x /tmp/config.sh
 /tmp/config.sh $NAME
+echo "Execution du script config.sh réussie"
 
 echo "Configuration mise à jour sur $NAME:"
 echo "- IPv4 basculé en DHCP."
