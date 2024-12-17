@@ -77,3 +77,13 @@ uci set wireless.@wifi-iface[-1].network='lan'
 
 uci commit wireless
 wifi reload
+
+
+# Suppresion des points d'accès Wifi par défaut
+
+uci delete wireless.default_radio0
+uci delete wireless.default_radio1
+
+uci commit
+wifi reload
+
