@@ -141,15 +141,15 @@
 
 ### Content (17/12/2024)
 
-* 
+* Ecriture du rapport
 
 ### To be done
 
-* 
-
-
+* Presentation
 
 
 ## Session 10
 
-### Presentation (18/12/2024)
+### Content (18/12/2024)
+
+* Presentation
